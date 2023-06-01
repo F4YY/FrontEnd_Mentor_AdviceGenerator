@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container } from './styled/container.styled';
-import { Quote, ReverseQuote, Separator, StyledAdvicegen } from './styled/AdviceGen.styled';
+import { Attribution, AttributionA, Divider, StyledAdvicegen } from './styled/AdviceGen.styled';
 
 export const AdviceGenerator = () => {
     const [adviceId, setAdviceId] = React.useState('999')
@@ -29,15 +29,25 @@ export const AdviceGenerator = () => {
             {loading ? <p className='loading'>Loading...</p> :
                 (
                 <p className='advice_quote'>
-                    <Quote src={require('./images/bg-pattern-quotation.svg').default} alt='quote'/>
-                    {advice}
-                    <ReverseQuote src={require('./images/bg-pattern-quotation.svg').default} alt='quote'/>
+                    <q>
+                        {advice}
+                    </q>
                 </p>
                 )
             }
-            <Separator/>
+            <Divider/>
             <button onClick={getAdvice}/>
         </StyledAdvicegen>
+        <footer>
+          <Attribution>
+              <AttributionA>
+                <p><i>Challenge by</i><a href="https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db/hub" rel="noreferrer" target="_blank">&nbsp;Frontend Mentor | Advice generator app.</a></p>
+              </AttributionA>
+              <AttributionA>
+                <p>&nbsp;&nbsp;<i>Coded by</i><a href="https://www.linkedin.com/in/rikiwendri/">&nbsp;Riki Wendri</a></p>
+              </AttributionA>
+          </Attribution>
+        </footer>
     </Container>
   )
 }

@@ -21,9 +21,9 @@ export const Container = styled.div`
     align-items: center;
     background-color: var(--Dark-Blue);
     @media screen and (max-width:1025px){
-        min-height:120vh;
+        padding:30px 0;
     }
     @media screen and (max-width:600px){
-        min-height:100vh;
+        padding:0;
     }
 `
